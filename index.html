@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitro A/C, LLC | Commercial & Residential HVAC Houston TX</title>
+    <meta name="description" content="Dependable residential and commercial HVAC services in Houston and surrounding communities. AC repair, installation, maintenance, and commercial mechanical projects. License TACLA74891E.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nitro: {
+                            navy: '#0b132b',
+                            dark: '#070d1d',
+                            slate: '#1c2541',
+                            steel: '#3a506b',
+                            blue: '#1e40af',
+                            blueLight: '#3b82f6',
+                            red: '#dc2626',
+                            redHover: '#b91c1c',
+                            green: '#059669',
+                            greenLight: '#10b981',
+                            lightBg: '#f1f5f9',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Enhanced Background Images with balanced overlays */
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(7, 13, 29, 0.88) 0%, rgba(11, 19, 43, 0.78) 50%, rgba(30, 64, 175, 0.65) 100%), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .commercial-bg {
+            background: linear-gradient(135deg, rgba(7, 13, 29, 0.90) 0%, rgba(28, 37, 65, 0.82) 100%), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .residential-bg {
+            background: linear-gradient(135deg, rgba(241, 245, 249, 0.94) 0%, rgba(226, 232, 240, 0.90) 100%), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .projects-bg {
+            background: linear-gradient(135deg, rgba(11, 19, 43, 0.92) 0%, rgba(7, 13, 29, 0.95) 100%), url('https://images.unsplash.com/photo-1541888946425-d0fbb18f965d?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .team-bg {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .contact-bg {
+            background: linear-gradient(135deg, rgba(7, 13, 29, 0.92) 0%, rgba(11, 19, 43, 0.88) 100%), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .project-card:hover .project-img {
+            transform: scale(1.08);
+        }
+        .tab-btn.active {
+            background-color: #1e40af;
+            color: white;
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-nitro-lightBg text-nitro-slate antialiased selection:bg-nitro-red selection:text-white">
+
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-nitro-dark/90 backdrop-blur-md border-b border-nitro-blueLight/20 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/ps/refs/heads/main/8b2e44a7-de7c-40eb-b61f-72425d47cf68.jpg" alt="Nitro A/C, LLC Logo" class="h-12 w-auto object-contain rounded-md border border-white/20 shadow-md group-hover:scale-105 transition-transform duration-300">
+                <div class="hidden sm:block">
+                    <span class="text-xl font-extrabold tracking-tight text-white block">NITRO <span class="text-nitro-red">A/C</span></span>
+                    <span class="text-[10px] tracking-widest uppercase text-nitro-greenLight font-semibold block">Commercial & Residential HVAC</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                <a href="#services" class="hover:text-nitro-blueLight transition-colors">Services</a>
+                <a href="#commercial" class="hover:text-nitro-blueLight transition-colors">Commercial</a>
+                <a href="#residential" class="hover:text-nitro-blueLight transition-colors">Residential</a>
+                <a href="#projects" class="hover:text-nitro-blueLight transition-colors">Projects</a>
+                <a href="#about" class="hover:text-nitro-blueLight transition-colors">Our Team</a>
+                <a href="#reviews" class="hover:text-nitro-blueLight transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-nitro-blueLight transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="tel:8327199650" class="flex items-center gap-2 text-white font-semibold hover:text-nitro-greenLight transition-colors bg-white/5 px-4 py-2 rounded-lg border border-white/10 shadow-sm">
+                    <i class="fa-solid fa-phone text-nitro-greenLight animate-pulse"></i>
+                    <span>(832) 719-9650</span>
+                </a>
+                <a href="#contact" class="bg-nitro-red hover:bg-nitro-redHover text-white px-5 py-2.5 rounded-lg font-semibold shadow-lg shadow-nitro-red/30 transition-all transform hover:-translate-y-0.5">
+                    Get Estimate
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none p-2">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-nitro-dark/98 backdrop-blur-xl border-b border-white/10 px-6 py-6 space-y-4 shadow-2xl">
+            <a href="#services" class="block text-lg font-medium hover:text-nitro-blueLight mobile-link">Services</a>
+            <a href="#commercial" class="block text-lg font-medium hover:text-nitro-blueLight mobile-link">Commercial</a>
+            <a href="#residential" class="block text-lg font-medium hover:text-nitro-blueLight mobile-link">Residential</a>
+            <a href="#projects" class="block text-lg font-medium hover:text-nitro-blueLight mobile-link">Projects</a>
+            <a href="#about" class="block text-lg font-medium hover:text-nitro-blueLight mobile-link">Our Team</a>
+            <a href="#reviews" class="block text-lg font-medium hover:text-nitro-blueLight mobile-link">Reviews</a>
+            <a href="#contact" class="block text-lg font-medium hover:text-nitro-blueLight mobile-link">Contact</a>
+            <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+                <a href="tel:8327199650" class="flex items-center justify-center gap-2 bg-white/10 py-3 rounded-lg font-bold">
+                    <i class="fa-solid fa-phone text-nitro-greenLight"></i> (832) 719-9650
+                </a>
+                <a href="#contact" class="bg-nitro-red text-center text-white py-3 rounded-lg font-bold shadow-md">
+                    Request an Estimate
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trust Strip -->
+    <div class="bg-nitro-navy text-white text-xs py-3 px-4 mt-20 border-b border-nitro-blue/40">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-2 font-medium">
+                    <i class="fa-solid fa-shield-halved text-nitro-greenLight"></i> Licensed HVAC Contractor: <strong class="text-white tracking-wider">TACLA74891E</strong>
+                </span>
+                <span class="hidden md:inline-flex items-center gap-2 text-slate-300">
+                    <i class="fa-solid fa-location-dot text-nitro-red"></i> Serving Houston & Surrounding Texas Communities
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://www.facebook.com/nitroac2020/" target="_blank" rel="noopener" class="text-slate-300 hover:text-nitro-blueLight transition-colors">
+                    <i class="fa-brands fa-facebook-f text-sm"></i>
+                </a>
+                <a href="https://www.instagram.com/nitroac2020/" target="_blank" rel="noopener" class="text-slate-300 hover:text-nitro-blueLight transition-colors">
+                    <i class="fa-brands fa-instagram text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero-bg text-white py-28 md:py-40 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-nitro-blue/30 border border-nitro-blueLight/50 text-nitro-blueLight text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
+                    <i class="fa-solid fa-bolt text-nitro-greenLight"></i> Professional HVAC Solutions
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Reliable HVAC. Built for Real-World Demands.
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 font-normal mb-10 leading-relaxed">
+                    Residential comfort. Commercial HVAC solutions. Dependable service across Houston and beyond.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-nitro-red hover:bg-nitro-redHover text-white px-8 py-4 rounded-xl font-bold text-center shadow-xl shadow-nitro-red/40 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                        <span>Request an Estimate</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="tel:8327199650" class="glass-card hover:bg-white/15 text-white px-8 py-4 rounded-xl font-bold text-center transition-all flex items-center justify-center gap-3 border border-white/20">
+                        <i class="fa-solid fa-phone text-nitro-greenLight"></i>
+                        <span>Call (832) 719-9650</span>
+                    </a>
+                </div>
+
+                <div class="mt-12 grid grid-cols-3 gap-6 pt-10 border-t border-white/15 text-slate-300 text-sm">
+                    <div>
+                        <span class="block text-2xl font-bold text-nitro-blueLight mb-1">Commercial</span>
+                        <span>Rooftop Units & Systems</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-bold text-nitro-greenLight mb-1">Residential</span>
+                        <span>AC Repair & Maintenance</span>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-bold text-nitro-red mb-1">Licensed</span>
+                        <span>TACLA74891E Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-nitro-blue font-bold text-sm tracking-widest uppercase block mb-3">Our Mission & Approach</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-nitro-dark tracking-tight mb-6">
+                        Honest, Dependable HVAC Service You Can Trust.
+                    </h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                        At Nitro A/C, LLC, we believe in solving HVAC problems properly the first time. Whether maintaining a large commercial facility or restoring cooling comfort to a family home, we treat every customer, property, and business with utmost care and professional respect.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-emerald-100 text-nitro-green font-bold flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-nitro-dark text-lg">Rigorous Diagnostics & Honest Recommendations</h3>
+                                <p class="text-slate-600 text-sm">No unnecessary upsells—just accurate assessments and dependable workmanship.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-red-100 text-nitro-red font-bold flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-nitro-dark text-lg">Experienced Technicians</h3>
+                                <p class="text-slate-600 text-sm">Skilled mechanics experienced in complex commercial installations and residential comfort.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-nitro-red font-bold hover:text-nitro-redHover group">
+                        <span>Get in touch with our team</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-nitro-blue/20 to-nitro-green/20 rounded-3xl -z-10 transform rotate-1 border border-nitro-blue/20"></div>
+                    <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/ps/refs/heads/main/661e8bfc-4afe-46d0-93f0-c236fe052a0e.jpg" alt="Nitro A/C HVAC technician at work" class="rounded-2xl shadow-2xl w-full h-[480px] object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="commercial" class="commercial-bg text-white py-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-nitro-greenLight font-bold text-sm tracking-widest uppercase block mb-3">Engineered for Business</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Commercial HVAC Solutions</h2>
+                <p class="text-slate-300 text-lg">Robust cooling, heating, and ventilation solutions designed for retail spaces, corporate offices, restaurants, and industrial facilities.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Commercial Card 1 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-nitro-blueLight/60 transition-all group shadow-xl">
+                    <div class="w-14 h-14 rounded-xl bg-nitro-blue/30 text-nitro-blueLight flex items-center justify-center text-2xl mb-6 group-hover:bg-nitro-blue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">System Repair & Replacement</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">Expert troubleshooting and heavy-duty replacement for commercial rooftop units and packaged mechanical systems.</p>
+                    <a href="#contact" class="text-nitro-greenLight font-semibold text-sm inline-flex items-center gap-2 hover:underline">
+                        <span>Request Commercial Service</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Commercial Card 2 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-nitro-red/60 transition-all group shadow-xl">
+                    <div class="w-14 h-14 rounded-xl bg-nitro-red/20 text-nitro-red flex items-center justify-center text-2xl mb-6 group-hover:bg-nitro-red group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Preventive Maintenance Plans</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">Customized scheduled maintenance programs to prevent unexpected breakdowns and extend system lifespan.</p>
+                    <a href="#contact" class="text-nitro-red font-semibold text-sm inline-flex items-center gap-2 hover:underline">
+                        <span>Schedule Maintenance</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Commercial Card 3 -->
+                <div class="glass-card rounded-2xl p-8 hover:border-nitro-greenLight/60 transition-all group shadow-xl">
+                    <div class="w-14 h-14 rounded-xl bg-nitro-green/20 text-nitro-greenLight flex items-center justify-center text-2xl mb-6 group-hover:bg-nitro-green group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Duct Repair & IAQ Solutions</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">Comprehensive commercial ductwork restoration, balancing, and indoor air-quality enhancements for employee safety.</p>
+                    <a href="#contact" class="text-nitro-greenLight font-semibold text-sm inline-flex items-center gap-2 hover:underline">
+                        <span>Explore IAQ Options</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#contact" class="inline-block bg-nitro-red hover:bg-nitro-redHover text-white px-8 py-3.5 rounded-xl font-bold shadow-lg transition-all">
+                    Request Commercial Estimate
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="residential" class="residential-bg py-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <span class="text-nitro-green font-bold text-sm tracking-widest uppercase block mb-3">Home Comfort</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-nitro-dark tracking-tight mb-6">
+                        Residential HVAC Services
+                    </h2>
+                    <p class="text-slate-700 text-lg leading-relaxed mb-6">
+                        Keep your home comfortable year-round with reliable AC repair, precision heating installation, and dependable maintenance backed by experienced technicians.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="glass-card-light p-4 rounded-xl border-l-4 border-nitro-blue shadow-sm flex items-center gap-3">
+                            <i class="fa-solid fa-snowflake text-nitro-blue text-xl"></i>
+                            <span class="font-semibold text-slate-800">AC Repair & Tune-Ups</span>
+                        </div>
+                        <div class="glass-card-light p-4 rounded-xl border-l-4 border-nitro-red shadow-sm flex items-center gap-3">
+                            <i class="fa-solid fa-fire text-nitro-red text-xl"></i>
+                            <span class="font-semibold text-slate-800">Heating Systems</span>
+                        </div>
+                        <div class="glass-card-light p-4 rounded-xl border-l-4 border-nitro-green shadow-sm flex items-center gap-3">
+                            <i class="fa-solid fa-sliders text-nitro-green text-xl"></i>
+                            <span class="font-semibold text-slate-800">Thermostat Installation</span>
+                        </div>
+                        <div class="glass-card-light p-4 rounded-xl border-l-4 border-nitro-blue shadow-sm flex items-center gap-3">
+                            <i class="fa-solid fa-shield-virus text-nitro-blue text-xl"></i>
+                            <span class="font-semibold text-slate-800">Air Quality Filtering</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/ps/refs/heads/main/Screenshot%202026-10-13%20005111.png" alt="Residential HVAC service" class="rounded-2xl shadow-2xl w-full h-[420px] object-cover border-2 border-white">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-bg text-white py-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-nitro-blueLight font-bold text-sm tracking-widest uppercase block mb-3">Proven Track Record</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Commercial Project Portfolio</h2>
+                <p class="text-slate-300 text-lg">A showcase of verified commercial contracts and mechanical installations successfully delivered across Texas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Project 1 -->
+                <div class="project-card bg-nitro-dark/90 rounded-2xl overflow-hidden shadow-xl border border-slate-700/80 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Whitewater Express Car Wash" class="project-img w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs font-bold uppercase tracking-wider bg-nitro-blue text-white px-2.5 py-1 rounded">Commercial</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-white text-lg mb-1">Whitewater Express Car Wash</h3>
+                        <p class="text-slate-400 text-xs">Specialized HVAC and mechanical ventilation setup.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-nitro-dark/90 rounded-2xl overflow-hidden shadow-xl border border-slate-700/80 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Leica at Houston Galleria" class="project-img w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs font-bold uppercase tracking-wider bg-nitro-red text-white px-2.5 py-1 rounded">Retail</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-white text-lg mb-1">Leica at Houston Galleria</h3>
+                        <p class="text-slate-400 text-xs">Precision retail climate control installation.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-nitro-dark/90 rounded-2xl overflow-hidden shadow-xl border border-slate-700/80 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Cheddar's Restaurant" class="project-img w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs font-bold uppercase tracking-wider bg-nitro-green text-white px-2.5 py-1 rounded">Hospitality</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-white text-lg mb-1">Cheddar's Restaurant</h3>
+                        <p class="text-slate-400 text-xs">Commercial kitchen ventilation & dining climate systems.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-nitro-dark/90 rounded-2xl overflow-hidden shadow-xl border border-slate-700/80 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80" alt="PGA Superstore" class="project-img w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-xs font-bold uppercase tracking-wider bg-nitro-blue text-white px-2.5 py-1 rounded">Commercial</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-white text-lg mb-1">PGA Superstore</h3>
+                        <p class="text-slate-400 text-xs">Large-scale commercial climate regulation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Projects Listed -->
+            <div class="mt-12 glass-card rounded-2xl p-8 border border-white/10">
+                <h3 class="font-bold text-white text-xl mb-4 text-center">Other Notable Projects & Engagements</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="bg-nitro-dark/60 p-4 rounded-xl shadow-sm border-l-4 border-nitro-blue font-semibold text-slate-200">Houston Salon Suites</div>
+                    <div class="bg-nitro-dark/60 p-4 rounded-xl shadow-sm border-l-4 border-nitro-red font-semibold text-slate-200">Dogtopia Facility</div>
+                    <div class="bg-nitro-dark/60 p-4 rounded-xl shadow-sm border-l-4 border-nitro-green font-semibold text-slate-200">Wells Elementary Renovation</div>
+                    <div class="bg-nitro-dark/60 p-4 rounded-xl shadow-sm border-l-4 border-nitro-blue font-semibold text-slate-200">UPS Texas City Expansion</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-bg text-white py-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-nitro-greenLight font-bold text-sm tracking-widest uppercase block mb-3">Leadership & Experience</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Meet Our Leadership</h2>
+                <p class="text-slate-300 text-lg">Experienced professionals dedicated to technical precision, transparent service, and client satisfaction.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Jorge Aranda -->
+                <div class="glass-card rounded-2xl p-6 text-center border-t-4 border-nitro-red overflow-hidden group shadow-xl">
+                    <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-2 border-nitro-red/50 shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Jorge Aranda" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg mb-1">Jorge Aranda</h3>
+                    <p class="text-nitro-red text-xs font-semibold uppercase tracking-wider mb-2">President</p>
+                    <p class="text-slate-300 text-xs">Directing company operations and engineering standards.</p>
+                </div>
+                <!-- Timothy Hood -->
+                <div class="glass-card rounded-2xl p-6 text-center border-t-4 border-nitro-blueLight overflow-hidden group shadow-xl">
+                    <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-2 border-nitro-blueLight/50 shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Timothy Hood" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg mb-1">Timothy Hood</h3>
+                    <p class="text-nitro-blueLight text-xs font-semibold uppercase tracking-wider mb-2">Technician / Lead</p>
+                    <p class="text-slate-300 text-xs">Expert mechanical installation and field diagnostics.</p>
+                </div>
+                <!-- Olga Aranda -->
+                <div class="glass-card rounded-2xl p-6 text-center border-t-4 border-nitro-greenLight overflow-hidden group shadow-xl">
+                    <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-2 border-nitro-greenLight/50 shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Olga Aranda" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg mb-1">Olga Aranda</h3>
+                    <p class="text-nitro-greenLight text-xs font-semibold uppercase tracking-wider mb-2">Operations</p>
+                    <p class="text-slate-300 text-xs">Managing project scheduling and customer support.</p>
+                </div>
+                <!-- Chrystal Aranda -->
+                <div class="glass-card rounded-2xl p-6 text-center border-t-4 border-nitro-red overflow-hidden group shadow-xl">
+                    <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-2 border-nitro-red/50 shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Chrystal Aranda" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg mb-1">Chrystal Aranda</h3>
+                    <p class="text-nitro-red text-xs font-semibold uppercase tracking-wider mb-2">Administration</p>
+                    <p class="text-slate-300 text-xs">Client relations and administrative management.</p>
+                </div>
+                <!-- Marina Rodriguez -->
+                <div class="glass-card rounded-2xl p-6 text-center border-t-4 border-nitro-blueLight overflow-hidden group shadow-xl">
+                    <div class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-2 border-nitro-blueLight/50 shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Marina Rodriguez" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg mb-1">Marina Rodriguez</h3>
+                    <p class="text-nitro-blueLight text-xs font-semibold uppercase tracking-wider mb-2">Support & Logistics</p>
+                    <p class="text-slate-300 text-xs">Coordinating field logistics and client communications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-28 bg-nitro-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-nitro-blue font-bold text-sm tracking-widest uppercase block mb-3">Client Trust</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-nitro-dark tracking-tight mb-4">What Our Clients Say</h2>
+                <p class="text-slate-600 text-lg">Genuine feedback from residential and commercial partners across Texas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-nitro-blue relative">
+                    <div class="text-nitro-blue text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-slate-700 italic mb-6 leading-relaxed">
+                        "Nitro A/C handled our commercial HVAC replacement with absolute professionalism. Their team worked efficiently around our business hours and the system has been running flawlessly ever since."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-nitro-blue text-white flex items-center justify-center font-bold">CM</div>
+                        <div>
+                            <h3 class="font-bold text-nitro-dark">Commercial Client</h3>
+                            <p class="text-slate-500 text-xs">Houston, TX</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-nitro-green relative">
+                    <div class="text-nitro-green text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-slate-700 italic mb-6 leading-relaxed">
+                        "Fast response time and honest pricing. They diagnosed our residential AC issue immediately and had it fixed without any hidden charges or unnecessary runaround. Highly recommended!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-nitro-green text-white flex items-center justify-center font-bold">JD</div>
+                        <div>
+                            <h3 class="font-bold text-nitro-dark">Residential Homeowner</h3>
+                            <p class="text-slate-500 text-xs">Surrounding Houston Area</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-bg text-white py-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <span class="text-nitro-red font-bold text-sm tracking-widest uppercase block mb-3">Get in Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">
+                        Request an Estimate or Service
+                    </h2>
+                    <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                        Ready to schedule service or need a commercial HVAC estimate? Fill out the form or reach out directly using our contact details below.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/20 text-nitro-red flex items-center justify-center text-xl flex-shrink-0 border border-red-500/30">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">Phone</h3>
+                                <a href="tel:8327199650" class="text-slate-300 hover:text-nitro-red font-semibold">(832) 719-9650</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-nitro-blueLight flex items-center justify-center text-xl flex-shrink-0 border border-blue-500/30">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">HVAC License</h3>
+                                <p class="text-slate-300">TACLA74891E</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-nitro-greenLight flex items-center justify-center text-xl flex-shrink-0 border border-emerald-500/30">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg">Service Area</h3>
+                                <p class="text-slate-300">Houston and surrounding communities across Texas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="glass-card text-white rounded-2xl p-8 shadow-2xl border border-white/20">
+                    <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                    <form id="estimate-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-1">Full Name *</label>
+                            <input type="text" id="name" required class="w-full bg-slate-900/80 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-nitro-blueLight transition-colors" placeholder="John Doe">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-1">Phone Number *</label>
+                                <input type="tel" id="phone" required class="w-full bg-slate-900/80 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-nitro-blueLight transition-colors" placeholder="(832) 000-0000">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-1">Email Address *</label>
+                                <input type="email" id="email" required class="w-full bg-slate-900/80 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-nitro-blueLight transition-colors" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-1">Service Type *</label>
+                            <select id="service-type" class="w-full bg-slate-900/80 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-nitro-blueLight transition-colors">
+                                <option value="commercial">Commercial HVAC Service / Estimate</option>
+                                <option value="residential">Residential AC Repair / Maintenance</option>
+                                <option value="ductwork">Ductwork Repair & Replacement</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-1">Message / Details *</label>
+                            <textarea id="message" rows="4" required class="w-full bg-slate-900/80 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-nitro-blueLight transition-colors" placeholder="Tell us about your HVAC needs..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-nitro-red hover:bg-nitro-redHover text-white font-bold py-4 rounded-lg shadow-lg shadow-nitro-red/40 transition-all">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden mt-4 p-4 bg-emerald-900/90 border border-emerald-500 text-emerald-200 rounded-lg text-center font-semibold">
+                        Thank you! Your inquiry has been received. We will contact you shortly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-nitro-dark text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="flex items-center gap-3 mb-4 group">
+                        <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/ps/refs/heads/main/8b2e44a7-de7c-40eb-b61f-72425d47cf68.jpg" alt="Nitro A/C Logo" class="h-10 w-auto object-contain rounded border border-slate-700 group-hover:opacity-90 transition-opacity">
+                        <span class="text-lg font-bold text-white">NITRO A/C, LLC</span>
+                    </a>
+                    <p class="text-sm text-slate-400 mb-4">
+                        Dependable commercial and residential HVAC service across Houston and Texas.
+                    </p>
+                    <p class="text-xs text-nitro-greenLight font-semibold">
+                        License: TACLA74891E
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#commercial" class="hover:text-white transition-colors">Commercial HVAC</a></li>
+                        <li><a href="#residential" class="hover:text-white transition-colors">Residential AC</a></li>
+                        <li><a href="#projects" class="hover:text-white transition-colors">Project Portfolio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Company</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-white transition-colors">Our Team</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition-colors">Customer Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Connect With Us</h3>
+                    <div class="flex items-center gap-4 mb-4">
+                        <a href="https://www.facebook.com/nitroac2020/" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-nitro-blueLight text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nitroac2020/" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-nitro-red text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-xs text-slate-400">Phone: (832) 719-9650</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 Nitro A/C, LLC. All rights reserved. TACLA74891E</p>
+                <div class="flex gap-4 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission handler (mock feedback without alert)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('estimate-form');
+            const successDiv = document.getElementById('form-success');
+            
+            form.style.opacity = '0.5';
+            setTimeout(() => {
+                form.reset();
+                form.style.opacity = '1';
+                successDiv.classList.remove('hidden');
+                successDiv.scrollIntoView({ behavior: 'smooth' });
+                
+                setTimeout(() => {
+                    successDiv.classList.add('hidden');
+                }, 6000);
+            }, 600);
+        }
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-xl', 'bg-nitro-dark');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+
+</body>
+</html>
